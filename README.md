@@ -7,7 +7,21 @@ The benefit of this text corpus is that it does not just contain the article spa
 We used a wikipedia dump as the data source.
 - They can be downloaded here: https://dumps.wikimedia.org/
 - Mirror here: https://dumps.wikimedia.org/mirrors.html
-- `dewiki-20181001-pages-meta-current.xml.bz2`was used here - this dump also contains the comments
+- `dewiki-20181001-pages-meta-current.xml.bz2`was used because this dump also contains the comments
+
+Then the tool [WikiExtractor](https://github.com/attardi/wikiextractor) was used to extract the xml dump. To also include the discussion the WikiExtractor tool has been modified:
+```
+def keepPage(ns, page):
+    if ns != '0' and ns != '1': # Aritcle and Talk
+        print('skipped ns:', ns)
+        return False
+    # remove disambig pages if desired
+    if options.filter_disambig_pages:
+        for line in page:
+            if filter_disambig_page_pattern.match(line):
+                return False
+    return True
+```
 
 [...]
 
