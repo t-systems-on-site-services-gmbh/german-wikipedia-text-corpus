@@ -1,6 +1,8 @@
 # German Wikipedia Text Corpus
 This is a german text corpus from Wikipedia. It is cleaned, preprocessed and sentence splitted. It's purpose is to train NLP embeddings like [fastText](https://fasttext.cc/) or [ELMo Deep contextualized word representations](https://allennlp.org/elmo).
 
+The benefit of this text corpus is that it does not just contain the article space of the wiki. It also contains the comments for a larger text corpus and a more sloppy language. This should improve the quality of downstream tasks when you process conversations like mails, chats, tweets or support tickets.
+
 ## Download
 You can download the texts here: 
 - [wiki-all-shuf.tgz.part-00](https://github.com/t-systems-on-site-services-gmbh/german-wikipedia-text-corpus/releases/download/files_2/wiki-all-shuf.tgz.part-00)
