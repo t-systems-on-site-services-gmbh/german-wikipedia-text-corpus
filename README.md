@@ -23,7 +23,11 @@ def keepPage(ns, page):
     return True
 ```
 
-[...]
+Now some hand crafted python tool was used for further processing: https://github.com/PhilipMay/de-wiki-text-corpus-tools/blob/master/process_wiki_files.py
+- [SoMaJo](https://github.com/tsproisl/SoMaJo) was used for tokenization and sentence splitting
+- article headlines and some markup was removed
+
+Everything has been shuffled on sentence level with linux `shuf` command.
 
 ## Download
 You can download the texts here: 
