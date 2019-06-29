@@ -25,6 +25,7 @@ def keepPage(ns, page):
 
 Now some hand crafted python tool was used for further processing: https://github.com/PhilipMay/de-wiki-text-corpus-tools/blob/master/process_wiki_files.py
 - [SoMaJo](https://github.com/tsproisl/SoMaJo) was used for tokenization and sentence splitting
+- [spaCy](https://spacy.io/) and [gensim](https://radimrehurek.com/gensim/) also have been tested for tokenization and sentence splitting but have not been as good as SoMaJo for german language
 - article headlines and some markup was removed
 
 Everything has been shuffled on sentence level with linux `shuf` command.
