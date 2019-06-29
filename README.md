@@ -3,6 +3,14 @@ This is a german text corpus from Wikipedia. It is cleaned, preprocessed and sen
 
 The benefit of this text corpus is that it does not just contain the article space of the wiki. It also contains the comments for a larger text corpus and a more sloppy language. This should improve the quality of downstream tasks when you process conversations like mails, chats, tweets or support tickets.
 
+## How this corpus has been generated
+We used a wikipedia dump as the data source.
+- They can be downloaded here: https://dumps.wikimedia.org/
+- Mirror here: https://dumps.wikimedia.org/mirrors.html
+- `dewiki-20181001-pages-meta-current.xml.bz2`was used here - this dump also contains the comments
+
+[...]
+
 ## Download
 You can download the texts here: 
 - [wiki-all-shuf.tgz.part-00](https://github.com/t-systems-on-site-services-gmbh/german-wikipedia-text-corpus/releases/download/files_2/wiki-all-shuf.tgz.part-00)
