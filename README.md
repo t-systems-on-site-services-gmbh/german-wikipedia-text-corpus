@@ -8,7 +8,7 @@ You can download the texts here:
 - [wiki-all-shuf.tgz.part-02](https://github.com/t-systems-on-site-services-gmbh/german-wikipedia-text-corpus/releases/download/files_2/wiki-all-shuf.tgz.part-02)
 
 ## Unpack
-Using these commands you can unpack the files:
+Using these commands you can unpack the files (Linux and macOS):
 ```
 cat wiki-all-shuf.tgz.part-* > wiki-all-shuf.tgz
 tar xvfz wiki-all-shuf.tgz
