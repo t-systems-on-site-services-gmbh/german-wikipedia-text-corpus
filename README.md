@@ -6,6 +6,7 @@ You can download the texts here:
 - [wiki-all-shuf.tgz.part-00](https://github.com/t-systems-on-site-services-gmbh/german-wikipedia-text-corpus/releases/download/files_2/wiki-all-shuf.tgz.part-00)
 - [wiki-all-shuf.tgz.part-01](https://github.com/t-systems-on-site-services-gmbh/german-wikipedia-text-corpus/releases/download/files_2/wiki-all-shuf.tgz.part-01)
 - [wiki-all-shuf.tgz.part-02](https://github.com/t-systems-on-site-services-gmbh/german-wikipedia-text-corpus/releases/download/files_2/wiki-all-shuf.tgz.part-02)
+- wiki-all-shuf.tgz MD5: 51ddcca730dca6e48c29d6339c2059f9 SHA1: f1c7ef0245abca47d3be2657ac4c345a3dc8d121
 
 ## Unpack
 Using these commands you can unpack the files (Linux and macOS):
