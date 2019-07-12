@@ -1,15 +1,15 @@
 # German Wikipedia Text Corpus
-This is a german text corpus from Wikipedia. It is cleaned, preprocessed and sentence splitted. It's purpose is to train NLP embeddings like [fastText](https://fasttext.cc/) or [ELMo Deep contextualized word representations](https://allennlp.org/elmo).
+This is a German text corpus from Wikipedia. It is cleaned, preprocessed and sentence splitted. Its purpose is to train NLP embeddings like [fastText](https://fasttext.cc/) or [ELMo Deep contextualized word representations](https://allennlp.org/elmo).
 
-The benefit of this text corpus is that it does not just contain the article space of the wiki. It also contains the comments for a larger text corpus and a more sloppy language. This should improve the quality of downstream tasks when you process conversations like mails, chats, tweets or support tickets.
+The advantage of this text corpus is that it does not only contain the article space of the wiki, but also the comments for a larger text corpus and a more sloppy language. This should improve the quality of downstream tasks when you process conversations like mails, chats, tweets or support tickets.
 
 ## How this corpus has been generated
 We used a wikipedia dump as the data source.
 - They can be downloaded here: https://dumps.wikimedia.org/
 - Mirror here: https://dumps.wikimedia.org/mirrors.html
-- `dewiki-20181001-pages-meta-current.xml.bz2`was used because this dump also contains the comments
+- `dewiki-20181001-pages-meta-current.xml.bz2` was used because this dump also contains the comments
 
-Then the tool [WikiExtractor](https://github.com/attardi/wikiextractor) was used to extract the xml dump. To also include the discussion the WikiExtractor tool has been modified:
+Then the tool [WikiExtractor](https://github.com/attardi/wikiextractor) was used to extract the xml dump. To also include the discussion, the WikiExtractor tool has been modified:
 ```
 def keepPage(ns, page):
     if ns != '0' and ns != '1': # Aritcle and Talk
@@ -23,12 +23,12 @@ def keepPage(ns, page):
     return True
 ```
 
-Now some hand crafted python tool was used for further processing: https://github.com/PhilipMay/de-wiki-text-corpus-tools/blob/master/process_wiki_files.py
+Now some hand-crafted python tool was used for further processing: https://github.com/PhilipMay/de-wiki-text-corpus-tools/blob/master/process_wiki_files.py
 - [SoMaJo](https://github.com/tsproisl/SoMaJo) was used for tokenization and sentence splitting
-- [spaCy](https://spacy.io/) and [gensim](https://radimrehurek.com/gensim/) also have been tested for tokenization and sentence splitting but have not been as good as SoMaJo for german language
+- [spaCy](https://spacy.io/) and [gensim](https://radimrehurek.com/gensim/) also have been tested for tokenization and sentence splitting but have not been as good as SoMaJo for German language
 - article headlines and some markup was removed
 
-Everything has been shuffled on sentence level with linux `shuf` command.
+Everything has been shuffled on sentence-level with linux `shuf` command.
 
 ## Download
 You can download the texts here: 
@@ -46,11 +46,11 @@ You can download the texts here:
   - SHA1: f1c7ef0245abca47d3be2657ac4c345a3dc8d121
 
 ## Unpack
-Using these commands you can unpack the files (Linux and macOS):
+Using these commands, you can unpack the files (Linux and macOS):
 ```
 cat wiki-all-shuf.tgz.part-* > wiki-all-shuf.tgz
 tar xvfz wiki-all-shuf.tgz
 ```
 
 ## License
-As Wikipedia itself this is published under [Creative Commons Attribution-ShareAlike 3.0 Unported license](https://de.wikipedia.org/wiki/Wikipedia:Lizenzbestimmungen_Creative_Commons_Attribution-ShareAlike_3.0_Unported). 
+As Wikipedia itself, this is published under [Creative Commons Attribution-ShareAlike 3.0 Unported license](https://de.wikipedia.org/wiki/Wikipedia:Lizenzbestimmungen_Creative_Commons_Attribution-ShareAlike_3.0_Unported). 
