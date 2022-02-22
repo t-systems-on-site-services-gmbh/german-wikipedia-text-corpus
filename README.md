@@ -1,4 +1,7 @@
 # German Wikipedia Text Corpus
+
+**A more recent version of the text corpus is published here:** https://github.com/GermanT5/wikipedia2corpus
+
 This is a German text corpus from Wikipedia. It is cleaned, preprocessed and sentence splitted. Its purpose is to train NLP embeddings like [fastText](https://fasttext.cc/) or [ELMo Deep contextualized word representations](https://allennlp.org/elmo).
 
 The advantage of this text corpus is that it does not only contain the article space of the wiki, but also the comments for a larger text corpus and a more sloppy language. This should improve the quality of downstream tasks when you process conversations like mails, chats, tweets or support tickets.
